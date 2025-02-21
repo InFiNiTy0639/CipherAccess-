@@ -56,6 +56,10 @@ export const signup = async (req, res) => {
 	}
 };
 
+// ._doc --> This is a property of a Mongoose document that contains the raw data (the actual fields stored in the database) without the extra Mongoose wrapper.
+// ...user --> spread Operator
+
+
 export const verifyEmail = async (req, res) => {
 	const { code } = req.body;
 	try {

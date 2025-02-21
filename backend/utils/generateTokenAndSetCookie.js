@@ -14,3 +14,16 @@ export const generateTokenAndSetCookie = (res, userId) => {
 
   return token;
 };
+
+// Cookies are small pieces of data stored in the browser and sent with HTTP requests.
+// Using httpOnly, secure, and sameSite enhances security by limiting how and when the cookie is accessed or sent.
+
+
+// Flow -:
+// User logs in → Server checks credentials → Calls generateTokenAndSetCookie → Sets cookie in the response.
+// User makes a request to a protected route → Cookie is sent automatically → Server verifies the JWT → Grants access if valid.
+
+
+// Why Store a cookie?
+// Automatic Handling: Browsers send cookies with every request to the domain, simplifying client-side logic.
+// Security: httpOnly prevents JavaScript access, reducing XSS risks compared to storing in localStorage.
